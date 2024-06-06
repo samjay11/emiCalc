@@ -12,7 +12,7 @@ function App() {
 
   React.useEffect(() => {
     calculateInstallment();
-  }, [principalAmount, interest, tenure, paymentTerm]);
+  }, [principalAmount, interest, tenure, paymentTerm, calculateInstallment]);
 
   function calculateInstallment() {
     const r = paymentTerm === 'month' ? (interest / 12) / 100 : (interest / 52) / 100;
