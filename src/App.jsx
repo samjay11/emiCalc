@@ -94,7 +94,7 @@ function App() {
             fullWidth
             autoFocus
             value={tenure}
-            onChange={e => setTenure(e.target.value === '' ? 0 : Number(e.target.value))}
+            onChange={e => setTenure(Math.max(0, Number(e.target.value)))}
           ></TextField>
           <Slider
             defaultValue={1}
@@ -123,7 +123,7 @@ function App() {
               fullWidth
               autoFocus
               value={interestOnlyTenure}
-              onChange={e => setInterestOnlyTenure(e.target.value === '' ? 0 : Number(e.target.value))}
+              onChange={e => setInterestOnlyTenure(Math.max(0, Number(e.target.value)))}
             ></TextField>
             <Slider
               defaultValue={1}
